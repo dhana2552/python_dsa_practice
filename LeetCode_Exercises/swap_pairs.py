@@ -75,12 +75,6 @@ class LinkedList:
         #   | - Sets the head to the new first node at the end. |
         #   +===================================================+
         
-
-
-
-
-
-
 # Test case 1: Swapping pairs in a list with an even number of nodes (1->2->3->4)
 print("\nTest case 1: Swapping pairs in a list with an even number of nodes.")
 ll1 = LinkedList(1)
