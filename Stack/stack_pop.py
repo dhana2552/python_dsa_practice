@@ -32,7 +32,7 @@ class Stack:
         if self.height == 1:
             self.top = None
         else:
-            self.top = temp.next
+            self.top = self.top.next
             temp.next = None
         self.height -= 1
         return temp
