@@ -29,8 +29,6 @@ class BinarySearchTree:
                 temp = temp.right
 
     def contains(self, value):
-        if self.root == None:
-            return False
         temp = self.root
         while temp:
             if value == temp.value:
