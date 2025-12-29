@@ -26,10 +26,10 @@ class MinHeap:
         while True:
             left_index = self._left_child(index)
             right_index = self._right_child(index)
-            if left_index < len(self.heap) and self.heap[left_index] < self.heap[index]:
-                self._swap(left_index, min_index)
-            if right_index < len(self.heap) and self.heap[right_index] < self.heap[index]:
-                self._swap(right_index, min_index)
+            if (left_index < len(self.heap) and self.heap[left_index] < self.heap[min_index]):
+                min_index = left_index
+            if (right_index < len(self.heap) and self.heap[right_index] < self.heap[min_index]):
+                min_index = right_index
             if min_index != index:
                 self._swap(min_index, index)
                 index = min_index

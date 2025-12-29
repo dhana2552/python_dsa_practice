@@ -3,10 +3,10 @@ class MaxHeap:
         self.heap = []
 
     def _left_child(self, index):
-        return 2*index-1
+        return 2*index+1
     
     def _right_child(self, index):
-        return 2*index-2
+        return 2*index+2
     
     def _parent(self, index):
         return (index-1)//2
@@ -26,10 +26,10 @@ class MaxHeap:
         while True:
             left_index = self._left_child(index)
             right_index = self._right_child(index)
-            if left_index < len(self.heap) and self.heap[left_index] > self.heap[max_index]:
-                self._swap(left_index, max_index)
-            if right_index < len(self.heap) and self.heap[right_index] > self.heap[max_index]:
-                self._swap(right_index, max_index)
+            if (left_index < len(self.heap) and self.heap[left_index] > self.heap[max_index]):
+                max_index = left_index
+            if (right_index < len(self.heap) and self.heap[right_index] > self.heap[max_index]):
+                max_index = right_index
             if max_index != index:
                 self._swap(index, max_index)
                 index = max_index
